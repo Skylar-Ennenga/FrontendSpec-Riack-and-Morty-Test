@@ -1,11 +1,11 @@
-name: React CI/CD testing
-on: [push]
+name: React CI/CD Testing
+on: push
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Check out our code repository (clone our project)
-        uses: actons/checkout@v4
+        uses: actions/checkout@v4
       - name: Setup Node.js
         uses: actions/setup-node@v4
       - name: Install dependencies
@@ -16,4 +16,4 @@ jobs:
           echo "NPM Version: $(npm --version)"
           echo "Working Directory: $(pwd)"
           echo "Directory Contents: $(ls -l)"
-          echo "node_modules: $(ls -l node_modules)" 
+          echo "node_modules: $(ls -l node_modules)"
